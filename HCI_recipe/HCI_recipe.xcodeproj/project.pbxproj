@@ -19,6 +19,7 @@
 		8BBDA6241C74262700186CBA /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDA6231C74262700186CBA /* MealTableViewCell.swift */; };
 		8BBDA6261C742D0600186CBA /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDA6251C742D0600186CBA /* MealTableViewController.swift */; };
 		8BD828F01C76A522006156BA /* StepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD828EF1C76A522006156BA /* StepTableViewCell.swift */; };
+		8BF4DEC11C77A2BD00E96EF8 /* drawUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4DEC01C77A2BD00E96EF8 /* drawUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		8BBDA6231C74262700186CBA /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		8BBDA6251C742D0600186CBA /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
 		8BD828EF1C76A522006156BA /* StepTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepTableViewCell.swift; sourceTree = "<group>"; };
+		8BF4DEC01C77A2BD00E96EF8 /* drawUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = drawUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				8BB3B2D31C72C5CA00DC97B4 /* RecipeViewController.swift */,
 				8BBDA6231C74262700186CBA /* MealTableViewCell.swift */,
 				8BB3B2D51C72C5CA00DC97B4 /* Main.storyboard */,
+				8BF4DEC01C77A2BD00E96EF8 /* drawUIView.swift */,
 				8BD828EF1C76A522006156BA /* StepTableViewCell.swift */,
 				8BBDA6251C742D0600186CBA /* MealTableViewController.swift */,
 				8BBDA6211C74117300186CBA /* Recipe.swift */,
@@ -276,6 +279,7 @@
 			files = (
 				8BD828F01C76A522006156BA /* StepTableViewCell.swift in Sources */,
 				8BB3B2D41C72C5CA00DC97B4 /* RecipeViewController.swift in Sources */,
+				8BF4DEC11C77A2BD00E96EF8 /* drawUIView.swift in Sources */,
 				8BB3B2D21C72C5CA00DC97B4 /* AppDelegate.swift in Sources */,
 				8BB3B3001C73880C00DC97B4 /* IngredientCell.swift in Sources */,
 				8BBDA6221C74117300186CBA /* Recipe.swift in Sources */,

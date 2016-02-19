@@ -31,13 +31,27 @@ class RecipeViewController: UIViewController,UITableViewDataSource, UITableViewD
     var ingredients = ["Chicken","Sesame","Ketchup","Sugar"]
     var dosages = ["500g","1tsp","2Tsp","1Tsp"]
     var cookingtime = 30
-    var flavor = "sweet"
+    var flavor = "Sweet"
     var calorie = 300
     var stepTitle = ["Step 1","Step 2"]
     var stepDescription = ["this is step 1","this is step 2"]
     var stepPhoto = [UIImage(named: "SweetSour_Chicken")!,UIImage(named: "SweetSour_Chicken")!]
     var stepTip = ["Tips for step1","Tips for step2"]
+    var stepReminder = ["Chicken:500g","Ketchup:2Tsp\nSugar:1Tsp"]
+    var stepTimer = [5,10]
     
+    var timer: NSTimer!
+    
+    func fireCellsUpdate() {
+        let notification = NSNotification(name: "CustomCellUpdate", object: nil)
+        NSNotificationCenter.defaultCenter().postNotification(notification)
+    }
+    
+    deinit {
+        self.timer?.invalidate()
+        self.timer = nil
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -59,6 +73,9 @@ class RecipeViewController: UIViewController,UITableViewDataSource, UITableViewD
         caloryLabel.numberOfLines=0
         caloryLabel.frame = CGRectMake(0, 0, 65,50)
         caloryLabel.text = "Calorie\n\(calorie)K"
+        
+        //self.timer = NSTimer(timeInterval: 1.0, target: self, selector: Selector("fireCellsUpdate"), userInfo: nil, repeats: true)
+        //NSRunLoop.currentRunLoop().addTimer(self.timer, forMode: NSRunLoopCommonModes)
         
     }
     var clicked = false
@@ -99,13 +116,24 @@ class RecipeViewController: UIViewController,UITableViewDataSource, UITableViewD
             cell.stepTitle.text = stepTitle[indexPath.row]
             cell.stepDescription.text = stepDescription[indexPath.row]
             cell.tipText.text = stepTip[indexPath.row]
-            //cell.tipButton.indexPath = indexPath
+            cell.stepReminder.text = stepReminder[indexPath.row]
+            cell.stepReminder.numberOfLines = 0
+            cell.timerLabel.text = String(format: "%02d:%02d",stepTimer[indexPath.row],0)
+            cell.startButton.tag = stepTimer[indexPath.row]
+            cell.startButton.addTarget(self, action: "starttimer:", forControlEvents: .TouchUpInside)
+            //cell.restartButton.tag = stepTimer[indexPath.row]
+            //cell.restartButton.addTarget(self, action: "restart:", forControlEvents: .TouchUpInside)
+            //cell.timeInterval = NSTimeInterval(stepTimer[indexPath.row])
             cell.tipButton.tag = indexPath.row
             cell.tipButton.addTarget(self, action: "showtip:", forControlEvents: .TouchUpInside)
             return cell
         }
         
     }
+    @IBAction func startimer(sender: UIButton){
+        
+    }
+
     var selectedIndexPath : NSIndexPath?
 
     @IBAction func showtip(sender: UIButton){
@@ -165,12 +193,6 @@ class RecipeViewController: UIViewController,UITableViewDataSource, UITableViewD
         
     }
 
-    var tipclicked = false
-    @IBAction func tipShow(sender: AnyObject) {
-        if (tipclicked == false){
-            
-        }
-    }
 
     @IBAction func gotoOverview(sender: UIButton) {
         ScrollView.contentOffset = CGPointMake(0,0)
