@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "heart_hollow.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "tips.png",
       "scale" : "2x"
     },
     {

@@ -29,11 +29,11 @@ class MealTableViewController: UITableViewController {
         let photo1 = UIImage(named: "SweetSour_Chicken")!
         let meal1 = Recipe(name: "Sweet and Sour Chicken", photo: photo1, description: "description for recipe 1")!
         
-        let photo2 = UIImage(named: "SweetSour_Chicken")!
-        let meal2 = Recipe(name: "Chicken and Potatoes", photo: photo2, description: "description for recipe 2")!
+        let photo2 = UIImage(named: "BakedgeneralTSO_Chicken")!
+        let meal2 = Recipe(name: "Baked general TSO Chicken", photo: photo2, description: "description for recipe 2")!
         
-        let photo3 = UIImage(named: "SweetSour_Chicken")!
-        let meal3 = Recipe(name: "Pasta with Chicken", photo: photo3, description: "description for recipe 3")!
+        let photo3 = UIImage(named: "OvenFried_Chicken")!
+        let meal3 = Recipe(name: "Oven Fried Chicken", photo: photo3, description: "description for recipe 3")!
         
         meals += [meal1, meal2, meal3]
     }
@@ -114,6 +114,11 @@ class MealTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
+        let DestViewController = segue.destinationViewController as! RecipeViewController
+        DestViewController.testRecipe = meals[indexPath.row]
+
     }
     
 
