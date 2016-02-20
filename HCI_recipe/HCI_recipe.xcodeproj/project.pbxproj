@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B2729E91C780DD300E8FA27 /* timerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2729E81C780DD300E8FA27 /* timerViewController.swift */; };
 		8BB3B2D21C72C5CA00DC97B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB3B2D11C72C5CA00DC97B4 /* AppDelegate.swift */; };
 		8BB3B2D41C72C5CA00DC97B4 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB3B2D31C72C5CA00DC97B4 /* RecipeViewController.swift */; };
 		8BB3B2D71C72C5CA00DC97B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB3B2D51C72C5CA00DC97B4 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B2729E81C780DD300E8FA27 /* timerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = timerViewController.swift; sourceTree = "<group>"; };
 		8BB3B2CE1C72C5CA00DC97B4 /* HCI_recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCI_recipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB3B2D11C72C5CA00DC97B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BB3B2D31C72C5CA00DC97B4 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				8BB3B2D31C72C5CA00DC97B4 /* RecipeViewController.swift */,
 				8BBDA6231C74262700186CBA /* MealTableViewCell.swift */,
 				8BB3B2D51C72C5CA00DC97B4 /* Main.storyboard */,
+				8B2729E81C780DD300E8FA27 /* timerViewController.swift */,
 				8BF4DEC01C77A2BD00E96EF8 /* drawUIView.swift */,
 				8BD828EF1C76A522006156BA /* StepTableViewCell.swift */,
 				8BBDA6251C742D0600186CBA /* MealTableViewController.swift */,
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B2729E91C780DD300E8FA27 /* timerViewController.swift in Sources */,
 				8BD828F01C76A522006156BA /* StepTableViewCell.swift in Sources */,
 				8BB3B2D41C72C5CA00DC97B4 /* RecipeViewController.swift in Sources */,
 				8BF4DEC11C77A2BD00E96EF8 /* drawUIView.swift in Sources */,
